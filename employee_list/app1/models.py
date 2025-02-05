@@ -6,6 +6,11 @@ from django.db import models
 from django.db import models
 
 class Employee(models.Model):
+    DESIGNATION_CHOICES = [
+        ('developer', 'Developer'),
+        ('manager', 'Manager'),
+        ('hr', 'HR'),
+    ]
     # Fields for employee details
     name = models.CharField(max_length=100)
     email = models.EmailField(unique=True)

@@ -1,20 +1,117 @@
-/* Logo Image Styling */
-.logo-img {
-    width: 60px;
-    /* Size of the logo */
-    height: 60px;
-    border-radius: 50%;
-    /* Makes the image round */
-    object-fit: cover;
-    border: 3px solid #fff;
-    /* Adds a border around the logo */
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #bfdcf9;
+    margin: 0;
+    padding: 0;
+    color: #212529;
 }
-/* Logo Container (Top Left) */
+
+/* Logo */
 .logo-container {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align:left;
+   
+}
+
+.logo-img {
+    width: 50px;
+    height: auto;
+}
+
+/* Back Button */
+.btn-secondary {
+    margin-left: -3rem;
+    margin-top: -2rem;
+    background-color: #6c757d;
+    border-color: #6c757d;
+    font-weight: bold;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+/* Table Styles */
+.table {
+    margin-left: -3rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.table th,
+.table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table thead {
+    background-color: #007bff;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.table tbody tr:hover {
+    background-color: #d1ecf1;
+}
+
+/* Profile Image */
+.table td img {
+    border-radius: 50%;
+    border: 2px solid #007bff;
+    object-fit: cover;
+}
+
+/* Buttons in Actions */
+.btn-warning {
+    color: #fff;
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+    border-color: #d39e00;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #bd2130;
+    border-color: #b21f2d;
+}
+
+/* Success Message */
+.alert-success {
+    border: 2px solid #28a745;
+    font-weight: bold;
+    z-index: 1050;
+}
+
+.alert-success .btn-close {
+    color: #28a745;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .table {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+    }
 }

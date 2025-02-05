@@ -15,19 +15,20 @@
         <header class="container-fluid p-3 bg-dark text-white">
             <div class="d-flex justify-content-between align-items-center">
                 <!-- Logo -->
-                <div class="logo-container">
-                    <img src="{% static 'images/emp.png' %}" alt="Logo" class="logo-img">
+                <div class="d-flex align-items-center">
+                    <img src="{% static 'images/emp.png' %}" alt="Logo" class="rounded me-3" style="width: 80px;">
+                    <h4 class="mb-0">Employee Management System</h4>
                 </div>
 
                 <!-- Header Buttons -->
-                <div class="d-flex" style="margin-left: 5rem;">
+                <div class="d-flex align-items-center">
                     <a href="{% url 'create_employee' %}" class="btn btn-primary me-3">Create Employee</a>
                     <a href="{% url 'employee_list' %}" class="btn btn-info me-3">Employee List</a>
-                    <!-- Logout Button moved to rightmost position -->
-                <form action="{% url 'logout' %}" method="POST">
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-danger">Logout</button>
-                </form>
+                    <!-- Logout Button -->
+                    <form action="{% url 'logout' %}" method="POST" class="mb-0">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger">Logout</button>
+                    </form>
                 </div>
             </div>
         </header>

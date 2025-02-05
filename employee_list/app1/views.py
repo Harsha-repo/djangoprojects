@@ -32,6 +32,7 @@ from django.shortcuts import render, redirect
 from .forms import EmployeeForm
 from .models import Employee
 
+@login_required
 def create_employee(request):
     if request.method == 'POST':
         form = EmployeeForm(request.POST, request.FILES)  # Handling form data and file upload
@@ -45,7 +46,7 @@ def create_employee(request):
 
 
 # views.py
-
+@login_required
 def employee_list(request):
     employees = Employee.objects.all()  # Fetch all employees from the database
     return render(request, 'employee_list.html', {'employees': employees})
